@@ -21,6 +21,7 @@ export function SidebarDrawerProvider({
   useEffect(() => {
     // on route change, close drawer
     disclosure.onClose()
+    // don't include disclosure to useEffect dependencies (unexpected behavior)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [asPath])
 
